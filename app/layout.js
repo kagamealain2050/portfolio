@@ -2,7 +2,17 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { site } from "@/lib/content";
 
-const font = localFont({ src: "./fonts/PlusJakartaSans-Variable.woff2", weight: "200 800", variable: "--font", display: "swap" });
+const font = localFont({
+  src: [
+    { path: "./fonts/Poppins-300.woff2", weight: "300" },
+    { path: "./fonts/Poppins-400.woff2", weight: "400" },
+    { path: "./fonts/Poppins-500.woff2", weight: "500" },
+    { path: "./fonts/Poppins-600.woff2", weight: "600" },
+    { path: "./fonts/Poppins-700.woff2", weight: "700" },
+  ],
+  variable: "--font",
+  display: "swap",
+});
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
